@@ -24,7 +24,7 @@ describe('kala-muda-recruit-timeline', () => {
     const css = buildKmrTeamCss();
     for (let card = 0; card < KMR_TEAM_CARDS; card++) {
       expect(css).toContain(`@keyframes kmr-card-${card}`);
-      expect(css).toContain(`.kmr-card[data-i="${card}"]{animation-name:kmr-card-${card}}`);
+      expect(css).toContain(`.kmr-card[data-i="${card}"]{animation-name:kmr-card-${card};z-index:${KMR_TEAM_CARDS - card}}`);
       expect(css).toContain(`@keyframes kmr-note-${card}`);
       expect(css).toContain(`@keyframes kmr-dot-${card}`);
     }
