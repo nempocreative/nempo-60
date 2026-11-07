@@ -11,7 +11,7 @@
 - [x] Remove "Lowongan Kerja" kicker from slide 19
 - [x] Slide 19 background: combine the 3 uploaded staff photos, pink blazers like slide 12
 - [x] Refine slide 19 photo with natural makeup and preserved faces, professional typography, and regenerate its PNG
-- [ ] Slide 23: replace the photo with moving rear-view hairstyles and connect the branded MP4 download.
+- [x] Slide 23: replace the photo with moving rear-view hairstyles and connect the branded MP4 download.
 
 ## GGS Story
 - [x] Reels-size cover slide (04) in the GGS Story tab using the owner's new story header/footer
