@@ -122,6 +122,7 @@ import { GgsPromoSpesialSlide } from './components/GgsPromoSpesialSlide';
 import { GgsWeAreOpenSlide } from './components/GgsWeAreOpenSlide';
 import { GgsServicesSlide, GGS_SERVICES_SLIDES } from './components/GgsServicesSlide';
 import { GgsRatusPromoSlide } from './components/GgsRatusPromoSlide';
+import { KalaMudaRecruitSlide } from './components/KalaMudaRecruitSlide';
 
 const SpreadsheetViewer = lazy(async () => {
   const module = await import('./components/SpreadsheetViewer');
@@ -163,7 +164,9 @@ type FeedSlide =
   | 31
   | 32
   | 33
-  | 34;
+  | 34
+  | 35
+  | 36;
 
 type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22;
 
@@ -2760,7 +2763,7 @@ function App() {
   const exportRef = useRef<HTMLElement | null>(null);
   const isNempoFeed = activeFeed === 'nempo';
   const isHighQualityNempoStorySlide =
-    isNempoFeed && activeSlide >= 20 && activeSlide <= 34;
+    isNempoFeed && activeSlide >= 20 && activeSlide <= 36;
   const isCoupon = activeFeed === 'coupon';
   const isQCard = activeFeed === 'qcard';
   const isRundown = activeFeed === 'rundown';
@@ -2898,7 +2901,7 @@ function App() {
           highQualityCanvas.height,
         );
         renderedCanvas = highQualityCanvas;
-      } else if (isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34)) {
+      } else if (isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34 || activeSlide === 35 || activeSlide === 36)) {
         const artworkWidth = artwork.getBoundingClientRect().width;
         const scale = (outputWidth / artworkWidth) * renderScale;
         renderedCanvas = await domToCanvas(artwork, {
@@ -3063,7 +3066,7 @@ function App() {
       ? isGgsStory
         ? [1, 2, 3, 4, 5]
         : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
-      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34];
+      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
 
@@ -3337,7 +3340,7 @@ function App() {
                   ? 'Menyiapkan PNG…'
                   : isCalendar
                     ? 'Download PNG · 50×70 cm'
-                    : isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34)
+                    : isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34 || activeSlide === 35 || activeSlide === 36)
                       ? 'Download PNG · 3×'
                     : isPhotobooth || isGgsFeed || isHighQualityNempoStorySlide
                       ? 'Download PNG · 3×'
@@ -3418,6 +3421,12 @@ function App() {
             exportRef={exportRef}
             isStory={isGgsStory}
             slide={activeClientSlide}
+          />
+        ) : isNempoFeed && (activeSlide === 35 || activeSlide === 36) ? (
+          <KalaMudaRecruitSlide
+            mode={activeSlide === 36 ? 'info' : 'team'}
+            exportRef={exportRef}
+            slideNumber={activeSlide}
           />
         ) : (
           <FeedArtwork slide={activeSlide} exportRef={exportRef} />
