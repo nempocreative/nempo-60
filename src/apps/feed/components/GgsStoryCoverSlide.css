@@ -8,3 +8,8 @@
 .ggc-title span{white-space:nowrap}
 .ggc-title em{font-style:italic;font-weight:500;color:var(--ggc-accent)}
 .ggc-rule{width:12cqw;height:.3cqw;background:var(--ggc-accent)}
+/* Slide 05: photo centered, headline kept inside the middle 1080×1440 feed-crop band (22.2cqw–155.6cqw from top). */
+.ggc-centered .ggc-photo{top:0;height:100%;object-position:50% 50%}
+.ggc-centered .ggc-shade{background:var(--ggc-top-shade),var(--ggc-centered-shade)}
+.ggc-centered .ggc-copy{bottom:26.5cqw;gap:2.2cqw}
+.ggc-centered .ggc-title{font-size:8cqw}

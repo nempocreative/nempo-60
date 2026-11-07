@@ -7,6 +7,7 @@ import ggsRatusBenefitPng from '@/assets/ggs-feed-08-ratus-manfaat.png';
 import ggsNailPahlawanPng from '@/assets/ggs-feed-09-nail-pahlawan.png';
 import ggsLokerPng from '@/assets/ggs-feed-19-loker.png';
 import ggsStoryCoverPng from '@/assets/ggs-story-04-peduli-penampilan.png.asset.json';
+import ggsStoryCoverCenteredPng from '@/assets/ggs-story-05-peduli-penampilan-feed.png.asset.json';
 import ggsPromoSpesialPng from '@/assets/ggs-feed-11-promo-spesial.png';
 import ggsLayanan13Png from '@/assets/ggs-feed-13-layanan.png';
 import ggsLayanan14Png from '@/assets/ggs-feed-14-layanan.png';
@@ -2666,6 +2667,10 @@ function ClientFeedArtwork({
     return <GgsStoryCoverSlide exportRef={exportRef} />;
   }
 
+  if (isStory && slide === 5) {
+    return <GgsStoryCoverSlide exportRef={exportRef} centered />;
+  }
+
   if (!isStory && (slide === 2 || slide === 3)) {
     return <GgsBeautyContentSlide slide={slide} exportRef={exportRef} />;
   }
@@ -3038,7 +3043,7 @@ function App() {
       ? []
       : isGgsFeed
       ? isGgsStory
-        ? [1, 2, 3, 4]
+        ? [1, 2, 3, 4, 5]
         : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
       : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34];
   const selectedSlide =
@@ -3241,12 +3246,12 @@ function App() {
                   Video {activeClientSlide === 7 ? 20 : 15} detik · 1080×1440 · 30 fps.
                 </p>
               </>
-            ) : isGgsStory && activeClientSlide === 4 ? (
+            ) : isGgsStory && (activeClientSlide === 4 || activeClientSlide === 5) ? (
               <>
                 <PrebuiltPngDownload
-                  key="ggs-story-04"
-                  src={ggsStoryCoverPng.url}
-                  fileName="GGS-Story-04-Peduli-Penampilan.png"
+                  key={`ggs-story-0${activeClientSlide}`}
+                  src={activeClientSlide === 5 ? ggsStoryCoverCenteredPng.url : ggsStoryCoverPng.url}
+                  fileName={activeClientSlide === 5 ? 'GGS-Story-05-Peduli-Penampilan-Feed.png' : 'GGS-Story-04-Peduli-Penampilan.png'}
                   label="Download PNG · 3×"
                   className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
                 />
