@@ -163,10 +163,6 @@ export function GgsServicesSlide({ exportRef, data }: { exportRef?: RefObject<HT
       </div>
 
       <header className="ggsv-head" aria-hidden="true">
-        <p className="ggsv-kicker">
-          <span className="ggsv-kicker-line" />
-          GGS Beauty · Salon &amp; Spa
-        </p>
         <h2 className="ggsv-title">
           Layanan <em>Kami</em>
         </h2>

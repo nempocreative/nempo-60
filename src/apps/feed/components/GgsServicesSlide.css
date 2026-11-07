@@ -31,16 +31,7 @@
 
 /* Headline (right of the logo in the header overlay) */
 .ggsv-head { position: absolute; z-index: 3; left: 24cqw; right: 6cqw; top: 11.5cqw; }
-.ggsv-kicker {
-  display: flex; align-items: center; gap: 2cqw;
-  font-size: 2.8cqw; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap;
-}
-.ggsv-kicker-line {
-  width: 7cqw; height: .55cqw; border-radius: 1cqw;
-  background: linear-gradient(90deg, var(--ggsv-hot), #ff9bcd);
-}
 .ggsv-title {
-  margin-top: .8cqw;
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700; font-size: 9cqw; line-height: .98;
   color: var(--ggsv-magenta);
