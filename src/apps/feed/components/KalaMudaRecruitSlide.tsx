@@ -2,11 +2,11 @@ import { useEffect, useState, type RefObject } from 'react';
 import { Pause, Play, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import kalaMudaLogo from '@/assets/kala-muda-logo.png';
-import photoNongkrong from '@/assets/kalamuda-kegiatan-nongkrong-outdoor.jpg.asset.json';
-import photoBasecamp from '@/assets/kalamuda-kegiatan-basecamp.jpg.asset.json';
-import photoGoodStory from '@/assets/kalamuda-kegiatan-good-story-cafe.jpg.asset.json';
-import photoHunting from '@/assets/kalamuda-kegiatan-hunting-foto.jpg.asset.json';
-import photoPodcast from '@/assets/kalamuda-kegiatan-podcast-malam.webp';
+import teamMember01 from '@/assets/team/team-member-01.jpg';
+import teamMember02 from '@/assets/team/team-member-02.jpg';
+import teamMember03 from '@/assets/team/team-member-03.jpg';
+import teamMember04 from '@/assets/team/team-member-04.jpg';
+import teamMember05 from '@/assets/team/team-member-05.jpg';
 import {
   buildKmrInfoCss,
   buildKmrTeamCss,
@@ -22,11 +22,11 @@ export type KalaMudaRecruitMode = 'team' | 'info';
 type TeamCard = { name: string; note: string; photo: string };
 
 const TEAM_CARDS: TeamCard[] = [
-  { name: 'Nongkrong Outdoor', note: 'Ngobrol santai, ide jalan terus', photo: photoNongkrong.url },
-  { name: 'Basecamp', note: 'Kumpul tim, bagi tugas bareng', photo: photoBasecamp.url },
-  { name: 'Good Story Cafe', note: 'Diskusi konten sambil ngopi', photo: photoGoodStory.url },
-  { name: 'Hunting Foto', note: 'Latihan motret dan bikin konten', photo: photoHunting.url },
-  { name: 'Podcast Malam', note: 'Ngonten audio bareng tim', photo: photoPodcast },
+  { name: 'Creative Lead', note: 'Nahkoda ide dan konsep konten', photo: teamMember01 },
+  { name: 'Videographer', note: 'Bikin momen jadi video sinematik', photo: teamMember02 },
+  { name: 'Social Media', note: 'Jaga feed tetap hidup tiap hari', photo: teamMember03 },
+  { name: 'Content Creator', note: 'Ubah ide jadi konten yang viral', photo: teamMember04 },
+  { name: 'Designer', note: 'Racik visual yang bikin berhenti scroll', photo: teamMember05 },
 ];
 
 const TEAM_CSS = buildKmrTeamCss();
