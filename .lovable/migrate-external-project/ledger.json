@@ -2,14 +2,75 @@
   "source": "github:nempocreative/remix-of-nempo-62",
   "scope": "Phase 1: NEMPO Feed sub-app (/nempo-feed) only; rest of the NEMPO site to follow in later phases",
   "capabilities": [
-    {"capability": "code: feed app (src/apps/feed, 34 feed slides + 18 client slides)", "source": "src/apps/feed", "outcome": "migrate", "status": "pending", "next_action": "copy and mount at /nempo-feed"},
-    {"capability": "routes: /nempo-feed and /nempo-feed/*", "source": "src/routes/nempo-feed.*", "outcome": "migrate", "status": "pending", "next_action": "copy routes; redirect / to /nempo-feed until home is migrated"},
-    {"capability": "assets: bundled images/fonts/xlsx imported by feed", "source": "src/assets", "outcome": "migrate", "status": "pending", "next_action": "copy files"},
-    {"capability": "assets: CDN media (26 .asset.json pointers owned by source project)", "source": "src/assets/*.asset.json", "outcome": "migrate", "status": "pending", "next_action": "download from source preview, re-upload with lovable-assets"},
-    {"capability": "public files: public/nempo-feed", "source": "public/nempo-feed", "outcome": "migrate", "status": "pending", "next_action": "copy"},
-    {"capability": "schema/records/auth", "source": "none used by feed", "outcome": "not-applicable", "status": "verified", "next_action": "feed reads no database; handle in later phase for rest of site"},
-    {"capability": "external providers/webhooks/schedules/secrets", "source": "none used by feed", "outcome": "not-applicable", "status": "verified", "next_action": "none"},
-    {"capability": "tests: feed unit tests", "source": "src/apps/feed/**/*.test.ts*", "outcome": "migrate", "status": "pending", "next_action": "copy and run"},
-    {"capability": "verification", "source": "-", "outcome": "verify", "status": "pending", "next_action": "build, tests, browser check of feed"}
+    {
+      "capability": "code: feed app (src/apps/feed, 34 feed slides + 18 client slides)",
+      "source": "src/apps/feed",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "done"
+    },
+    {
+      "capability": "routes: /nempo-feed and /nempo-feed/*",
+      "source": "src/routes/nempo-feed.*",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "done"
+    },
+    {
+      "capability": "assets: bundled images/fonts/xlsx imported by feed",
+      "source": "src/assets",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "done"
+    },
+    {
+      "capability": "assets: CDN media (26 .asset.json pointers owned by source project)",
+      "source": "src/assets/*.asset.json",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "done"
+    },
+    {
+      "capability": "public files: public/nempo-feed",
+      "source": "public/nempo-feed",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "done"
+    },
+    {
+      "capability": "schema/records/auth",
+      "source": "none used by feed",
+      "outcome": "not-applicable",
+      "status": "verified",
+      "next_action": "feed reads no database; handle in later phase for rest of site"
+    },
+    {
+      "capability": "external providers/webhooks/schedules/secrets",
+      "source": "none used by feed",
+      "outcome": "not-applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "tests: feed unit tests",
+      "source": "src/apps/feed/**/*.test.ts*",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "done"
+    },
+    {
+      "capability": "verification",
+      "source": "-",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": "done"
+    },
+    {
+      "capability": "rest of NEMPO site (main pages, CMS, database, users)",
+      "source": "src/pages, src/apps/cms, drizzle, Lovable Cloud",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "later phase, on owner request"
+    }
   ]
 }
