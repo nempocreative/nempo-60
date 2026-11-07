@@ -28,6 +28,8 @@ type Props = {
   finalNote?: string;
   label?: string;
   slideNumber?: number;
+  overlay?: string;
+  theme?: 'beauty' | 'men';
 };
 
 /** GGS Feed 3:4 video: design cards glide through a carousel, then fan out. Defaults = slide 21 (nail art). */
@@ -38,6 +40,8 @@ export function GgsNailCardsSlide({
   finalNote = 'Tinggal pilih, sebut namanya saat booking.',
   label = 'Pilih nail art favoritmu',
   slideNumber = 21,
+  overlay = watermark.url,
+  theme = 'beauty',
 }: Props) {
   const CARDS = cards;
   const [paused, setPaused] = useState(false);
@@ -64,7 +68,7 @@ export function GgsNailCardsSlide({
       <div
         key={replayKey}
         ref={exportRef as RefObject<HTMLDivElement | null>}
-        className={`ggn-root${paused ? ' is-paused' : ''}${reduced ? ' is-reduced' : ''}`}
+        className={`ggn-root${theme === 'men' ? ' ggn-men' : ''}${paused ? ' is-paused' : ''}${reduced ? ' is-reduced' : ''}`}
         data-duration={NAIL_CARDS_DURATION}
         role="img"
         aria-label={`GGS Beauty — ${label}: ${CARDS.map((card) => card.name).join(', ')}.`}
@@ -94,7 +98,7 @@ export function GgsNailCardsSlide({
         <div className="ggn-dots" aria-hidden="true">
           {CARDS.map((card, i) => <span key={card.name} className="ggn-dot" data-i={i} />)}
         </div>
-        <img className="ggn-watermark" src={watermark.url} alt="" draggable={false} />
+        <img className="ggn-watermark" src={overlay} alt="" draggable={false} />
       </div>
     </div>
   );

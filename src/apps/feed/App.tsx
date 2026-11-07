@@ -7,6 +7,7 @@ import slide36VideoAsset from '@/assets/nempo-feed-slide-36.mp4.asset.json';
 import ggsRatusVideo from '@/assets/ggs-feed-07-ratus-hq.mp4.asset.json';
 import ggsNailCardsVideo from '@/assets/ggs-feed-21-nail-art.mp4.asset.json';
 import ggsHairCardsVideo from '@/assets/ggs-feed-22-model-rambut.mp4.asset.json';
+import ggsMenVideo from '@/assets/ggs-cowok-model-rambut.mp4.asset.json';
 import ggsRatusBenefitPng from '@/assets/ggs-feed-08-ratus-manfaat.png';
 import ggsNailPahlawanPng from '@/assets/ggs-feed-09-nail-pahlawan.png';
 import ggsLokerPng from '@/assets/ggs-feed-19-loker.png';
@@ -120,6 +121,7 @@ import { GgsLokerSlide } from './components/GgsLokerSlide';
 import { GgsFeedKidSlide } from './components/GgsFeedKidSlide';
 import { GgsNailCardsSlide } from './components/GgsNailCardsSlide';
 import { GgsHairCardsSlide } from './components/GgsHairCardsSlide';
+import { GgsMenHairCardsSlide } from './components/GgsMenHairCardsSlide';
 import { GgsPromoSpesialSlide } from './components/GgsPromoSpesialSlide';
 import { GgsWeAreOpenSlide } from './components/GgsWeAreOpenSlide';
 import { GgsServicesSlide, GGS_SERVICES_SLIDES } from './components/GgsServicesSlide';
@@ -2741,6 +2743,7 @@ function App() {
   const [activeFeed, setActiveFeed] = useState<
     | 'nempo'
     | 'client'
+    | 'ggs-men'
     | 'story'
     | 'coupon'
     | 'qcard'
@@ -2778,6 +2781,7 @@ function App() {
   const isSpreadsheet = activeFeed === 'spreadsheet';
   const isGgsFeed = activeFeed === 'client' || activeFeed === 'story';
   const isGgsStory = activeFeed === 'story';
+  const isGgsMen = activeFeed === 'ggs-men';
   const isGgsGrandOpeningSlide =
     activeFeed === 'client' && activeClientSlide === 3;
   const isGgsRatusVideoSlide =
@@ -3062,7 +3066,7 @@ function App() {
   };
 
   const visibleSlides =
-    isPhotobooth || isMemberCard || isCalendar
+    isPhotobooth || isMemberCard || isCalendar || isGgsMen
       ? []
       : isGgsFeed
       ? isGgsStory
@@ -3150,6 +3154,7 @@ function App() {
           >
             GGS Feed
           </button>
+          <Button role="tab" aria-selected={isGgsMen} onClick={() => setActiveFeed('ggs-men')} className="ggs-men-tab" variant="ghost" size="sm">GGS Cowok</Button>
           <button
             type="button"
             role="tab"
@@ -3232,7 +3237,8 @@ function App() {
             Q Card MC
           </button>
         </div>
-        {!isCoupon && !isQCard && !isSpreadsheet && !isRundown && !isBumper && (
+        {isGgsMen && <div className="mb-3"><Button asChild><a href={ggsMenVideo.url} download="GGS-Cowok-Pilihan-Rambut.mp4"><Download className="h-4 w-4" aria-hidden="true" />Download video · MP4</a></Button></div>}
+        {!isGgsMen && !isCoupon && !isQCard && !isSpreadsheet && !isRundown && !isBumper && (
           <div className="mb-3 flex flex-col items-center gap-2">
             {activeFeed === 'client' && activeClientSlide === 12 ? (
               <Button asChild>
@@ -3433,6 +3439,8 @@ function App() {
           <GgsBeautyPhotobooth exportRef={exportRef} />
         ) : isCalendar ? (
           <Ggs2027Calendar exportRef={exportRef} />
+        ) : isGgsMen ? (
+          <GgsMenHairCardsSlide exportRef={exportRef} />
         ) : isGgsFeed ? (
           <ClientFeedArtwork
             exportRef={exportRef}
@@ -3448,7 +3456,7 @@ function App() {
         ) : (
           <FeedArtwork slide={activeSlide} exportRef={exportRef} />
         )}
-        {!isSpreadsheet && !isRundown && !isBumper && !isCoupon && !isQCard && !isPhotobooth && !isMemberCard && !isCalendar && <div
+        {!isGgsMen && !isSpreadsheet && !isRundown && !isBumper && !isCoupon && !isQCard && !isPhotobooth && !isMemberCard && !isCalendar && <div
           className="mt-4 flex max-w-[94vw] items-center gap-1 overflow-x-auto rounded-full bg-[#062f4d] p-1 shadow-[0_8px_20px_rgba(0,40,78,0.2)] max-[640px]:mb-4 max-[640px]:gap-0.5 max-[640px]:p-0.5"
           aria-label={
             isGgsStory
