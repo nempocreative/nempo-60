@@ -1906,9 +1906,9 @@ export default function Home() {
                   decoding="async"
                 />
               </div>
-              <div className="flex flex-1 flex-col justify-center gap-2 p-4 sm:gap-3 sm:p-8 lg:p-10">
-                <div className="flex flex-wrap items-center gap-2">
-                  <p className="text-xs font-bold uppercase tracking-wider text-primary">Rabu, 4 November 2026</p>
+              <div className="flex flex-1 flex-col justify-center gap-1.5 p-3.5 sm:gap-3 sm:p-8 lg:p-10">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-primary sm:text-xs">Rabu, 4 November 2026</p>
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-primary">Gratis</span>
                   {eventFinished && (
                     <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-muted-foreground">
