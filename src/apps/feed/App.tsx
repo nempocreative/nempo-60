@@ -3,6 +3,8 @@ import slide32VideoAsset from '@/assets/nempo-feed-slide-32.mp4.asset.json';
 import slide33VideoAsset from '@/assets/nempo-feed-slide-33.mp4.asset.json';
 import slide34VideoAsset from '@/assets/nempo-feed-slide-34.mp4.asset.json';
 import ggsRatusVideo from '@/assets/ggs-feed-07-ratus-hq.mp4.asset.json';
+import ggsNailCardsVideo from '@/assets/ggs-feed-21-nail-art.mp4.asset.json';
+import ggsHairCardsVideo from '@/assets/ggs-feed-22-model-rambut.mp4.asset.json';
 import ggsRatusBenefitPng from '@/assets/ggs-feed-08-ratus-manfaat.png';
 import ggsNailPahlawanPng from '@/assets/ggs-feed-09-nail-pahlawan.png';
 import ggsLokerPng from '@/assets/ggs-feed-19-loker.png';
@@ -3246,6 +3248,20 @@ function App() {
                 </a>
                 <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
                   Video 16 detik · 1080×1440 · 30 fps, persis seperti pratinjau.
+                </p>
+              </>
+            ) : activeFeed === 'client' && (activeClientSlide === 21 || activeClientSlide === 22) ? (
+              <>
+                <a
+                  href={activeClientSlide === 21 ? ggsNailCardsVideo.url : ggsHairCardsVideo.url}
+                  download={activeClientSlide === 21 ? 'GGS-Feed-21-Pilih-Nail-Art.mp4' : 'GGS-Feed-22-Pilih-Model-Rambut.mp4'}
+                  className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
+                >
+                  <Download className="h-3.5 w-3.5" aria-hidden="true" />
+                  Download video · MP4
+                </a>
+                <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
+                  Video 15 detik · 1080×1440 · 30 fps · kualitas tinggi, persis seperti pratinjau.
                 </p>
               </>
             ) : isGgsRatusVideoSlide ? (
