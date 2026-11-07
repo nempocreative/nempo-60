@@ -1,6 +1,8 @@
 import type { Database } from "@/integrations/supabase/types";
 
-type TableName = keyof Database["public"]["Tables"];
+type Tables = Database["public"]["Tables"];
+// Falls back to plain string while the database schema is still empty (tables not migrated yet).
+type TableName = [keyof Tables] extends [never] ? string : keyof Tables;
 
 /** Every table in the database. Adding a table to the database without listing it here fails the type check. */
 export const BACKUP_TABLES = [

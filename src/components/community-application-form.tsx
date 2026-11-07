@@ -117,7 +117,7 @@ export function CommunityApplicationForm() {
     window.open(url, "_blank", "noopener,noreferrer");
 
     setSubmitting(true);
-    const { error } = await supabase.from("community_applications").insert({
+    const { error } = await supabase.from("community_applications" as never).insert({
       full_name: parsed.data.full_name,
       email: parsed.data.email,
       whatsapp: parsed.data.whatsapp,
@@ -126,7 +126,7 @@ export function CommunityApplicationForm() {
       origin_type: parsed.data.origin_type,
       origin_name: parsed.data.origin_name || null,
       hobby: hobby || null,
-    });
+    } as never);
     setSubmitting(false);
     setArchived(!error);
     setSubmitted(true);

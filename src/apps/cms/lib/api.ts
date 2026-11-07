@@ -2,7 +2,9 @@ import { supabase } from '@/integrations/supabase/client';
 import type { Database } from '@/integrations/supabase/types';
 
 export type Entity = Record<string, unknown> & { id?: number | string };
-type TableName = keyof Database['public']['Tables'];
+type Tables = Database['public']['Tables'];
+// Falls back to plain string while the database schema is still empty (tables not migrated yet).
+type TableName = [keyof Tables] extends [never] ? string : keyof Tables;
 
 const USER_KEY = 'nempo_garut_admin_user';
 let cachedToken = '';
@@ -25,7 +27,7 @@ export function clearSession() {
 export async function restoreAdminSession(): Promise<string | null> {
   const { data } = await supabase.auth.getUser();
   if (!data.user) return null;
-  const { data: role } = await supabase.from('user_roles').select('role').eq('user_id', data.user.id).eq('role', 'admin').maybeSingle();
+  const { data: role } = await supabase.from('user_roles' as never).select('role').eq('user_id', data.user.id).eq('role', 'admin').maybeSingle();
   if (!role) return null;
   const { data: s } = await supabase.auth.getSession();
   cachedToken = s.session?.access_token ?? '';
@@ -58,7 +60,7 @@ export const routeFor = tableFor;
 const columnCache = new Map<string, Set<string>>();
 async function columnsOf(table: TableName): Promise<Set<string> | null> {
   if (columnCache.has(table)) return columnCache.get(table)!;
-  const { data } = await supabase.from(table).select('*').limit(1);
+  const { data } = await supabase.from(table as never).select('*').limit(1);
   if (!data?.length) return null;
   const set = new Set(Object.keys(data[0] as object));
   columnCache.set(table, set);
@@ -92,7 +94,7 @@ function tableOrThrow(slug: string) {
 export const resourceApi = {
   list: async (slug: string) => {
     const t = tableOrThrow(slug);
-    let q = supabase.from(t).select('*').order('id', { ascending: false });
+    let q = supabase.from(t as never).select('*').order('id', { ascending: false });
     if (slug === 'cafe') q = q.ilike('category' as never, '%cafe%');
     const { data, error } = await q; fail(error); return data ?? [];
   },
@@ -100,16 +102,16 @@ export const resourceApi = {
     const t = tableOrThrow(slug);
     const row = await clean(t, payload);
     if (slug === 'cafe' && !row.category) row.category = 'Cafe';
-    const { error } = await supabase.from(t).insert(row as never); fail(error); return {};
+    const { error } = await supabase.from(t as never).insert(row as never); fail(error); return {};
   },
   update: async (slug: string, id: string | number, payload: unknown) => {
     const t = tableOrThrow(slug);
-    const { error } = await supabase.from(t).update((await clean(t, payload)) as never).eq('id' as never, id as never); fail(error); return {};
+    const { error } = await supabase.from(t as never).update((await clean(t, payload)) as never).eq('id' as never, id as never); fail(error); return {};
   },
   remove: async (slug: string, id: string | number) => {
-    if (slug === 'settings') { const { error } = await supabase.from('site_settings').delete().eq('key', String(id)); fail(error); return {}; }
+    if (slug === 'settings') { const { error } = await supabase.from('site_settings' as never).delete().eq('key', String(id)); fail(error); return {}; }
     const t = tableOrThrow(slug);
-    const { error } = await supabase.from(t).delete().eq('id' as never, id as never); fail(error); return {};
+    const { error } = await supabase.from(t as never).delete().eq('id' as never, id as never); fail(error); return {};
   },
 };
 
@@ -118,20 +120,20 @@ export async function request<T>(path: string, method = 'GET', body?: unknown): 
   if (path === '/api/admin/stats') {
     const tables: TableName[] = ['wisata', 'kuliner', 'penginapan', 'events', 'berita', 'banners'];
     const counts = await Promise.all(tables.map(async t => {
-      const { count } = await supabase.from(t).select('*', { count: 'exact', head: true });
+      const { count } = await supabase.from(t as never).select('*', { count: 'exact', head: true });
       return [t, count ?? 0] as const;
     }));
     return Object.fromEntries(counts) as T;
   }
   if (path === '/api/admin/settings') {
     if (method === 'GET') {
-      const { data, error } = await supabase.from('site_settings').select('*').order('key'); fail(error);
-      return (data ?? []).map(r => ({ ...r, id: r.key })) as T;
+      const { data, error } = await supabase.from('site_settings' as never).select('*').order('key'); fail(error);
+      return (data ?? []).map((r: Record<string, unknown>) => ({ ...r, id: r.key })) as T;
     }
     const p = (body ?? {}) as Record<string, unknown>;
     const key = String(p.key ?? p.id ?? '').trim();
     if (!key) throw new ApiError('Kunci pengaturan wajib diisi.');
-    const { error } = await supabase.from('site_settings').upsert({ key, value: p.value == null ? null : String(p.value), updated_at: new Date().toISOString() });
+    const { error } = await supabase.from('site_settings' as never).upsert({ key, value: p.value == null ? null : String(p.value), updated_at: new Date().toISOString() } as never);
     fail(error); return {} as T;
   }
   if (path === '/api/admin/upload') throw new ApiError('Unggah file belum tersedia. Tempel URL gambar langsung pada kolom gambar.');
