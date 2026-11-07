@@ -115,6 +115,7 @@ import { GgsNailPahlawanSlide } from './components/GgsNailPahlawanSlide';
 import { GgsLokerSlide } from './components/GgsLokerSlide';
 import { GgsFeedKidSlide } from './components/GgsFeedKidSlide';
 import { GgsNailCardsSlide } from './components/GgsNailCardsSlide';
+import { GgsHairCardsSlide } from './components/GgsHairCardsSlide';
 import { GgsPromoSpesialSlide } from './components/GgsPromoSpesialSlide';
 import { GgsWeAreOpenSlide } from './components/GgsWeAreOpenSlide';
 import { GgsServicesSlide, GGS_SERVICES_SLIDES } from './components/GgsServicesSlide';
@@ -162,7 +163,7 @@ type FeedSlide =
   | 33
   | 34;
 
-type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21;
+type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22;
 
 const cafes = [
   {
@@ -2698,6 +2699,10 @@ function ClientFeedArtwork({
     return <GgsNailCardsSlide exportRef={exportRef} />;
   }
 
+  if (!isStory && slide === 22) {
+    return <GgsHairCardsSlide exportRef={exportRef} />;
+  }
+
   if (!isStory && slide === 10) {
     return <GgsPromoSpesialSlide exportRef={exportRef} />;
   }
@@ -3055,7 +3060,7 @@ function App() {
       : isGgsFeed
       ? isGgsStory
         ? [1, 2, 3, 4, 5]
-        : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+        : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
       : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
