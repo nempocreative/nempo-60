@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "a29155bc-c0a9-485d-92ba-bdfd8c661276",
-  "project_id": "46592bad-4f77-4f4c-84f2-6788c6e08c47",
-  "url": "/__l5e/assets-v1/a29155bc-c0a9-485d-92ba-bdfd8c661276/komunitas-webdev.jpg",
-  "r2_key": "a/v1/46592bad-4f77-4f4c-84f2-6788c6e08c47/a29155bc-c0a9-485d-92ba-bdfd8c661276/komunitas-webdev.jpg",
-  "original_filename": "komunitas-webdev.jpg",
-  "size": 125921,
   "content_type": "image/jpeg",
-  "created_at": "2026-11-07T06:55:42Z"
+  "created_at": "2026-11-07T06:55:42Z",
+  "original_filename": "komunitas-webdev.jpg",
+  "project_id": "3637b669-97cc-461b-b54f-035546daae31",
+  "r2_key": "a/v1/3637b669-97cc-461b-b54f-035546daae31/a29155bc-c0a9-485d-92ba-bdfd8c661276/komunitas-webdev.jpg",
+  "size": 125921,
+  "url": "/__l5e/assets-v1/a29155bc-c0a9-485d-92ba-bdfd8c661276/komunitas-webdev.jpg",
+  "version": 1
 }
