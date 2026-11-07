@@ -33,6 +33,16 @@
   --ggn-sheen: linear-gradient(105deg, transparent 30%, color-mix(in srgb, #ffffff 55%, transparent) 50%, transparent 70%);
 }
 /* Nempo Feed slides 35–36 (3:4 video): Kala Muda recruitment palette. */
+.ggs-men-tab { --ggm-tab-ink: #ffffff; --ggm-tab-active: #e4bd61; --ggm-ink: #161716; }
+.ggn-root.ggn-men {
+  --ggn-ink: #161716;
+  --ggn-ink-soft: #53574f;
+  --ggn-accent: #947126;
+  --ggn-paper: #e9eae6;
+  --ggn-card: #ffffff;
+  --ggn-bg: #f0f1ed;
+  --ggn-card-shadow: 0 2.4cqw 6cqw color-mix(in srgb, #252c22 22%, transparent), 0 .4cqw 1.2cqw color-mix(in srgb, #252c22 12%, transparent);
+}
 .kmr-root {
   --kmr-ink: #062f4d;
   --kmr-accent: #ffdd00;

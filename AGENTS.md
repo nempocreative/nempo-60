@@ -30,6 +30,7 @@ use the editor.
 <!-- LOVABLE:END -->
 
 ## Architecture rules
+- GGS Cowok is an independent feed tab using GgsMenHairCardsSlide and the shared 15-second GGS carousel with optional overlay/theme props; record its pointer-only MP4 from the preview at 2×, 1080×1440/30 fps/CRF 11, whenever it changes, so men's branding never modifies women's slides.
 - This project is being migrated in phases from nempocreative/remix-of-nempo-62; phase 1 moved only the Nempo Feed app (`src/apps/feed`, mounted at `/nempo-feed`), and `/` redirects there until the main site is migrated; why: the owner asked for the feed first.
 - Media pointers under `src/assets/` must belong to this project's own storage (re-upload with `lovable-assets create` when bringing files from another project); why: a foreign project's pointer breaks once published.
 - MusiComedy's opening bumper lives in its own feed tab with a 4:3 landscape animated stage (ending on a menu-ordering message) and a pre-rendered MP4 download; why: event playback and export must match without changing existing slides.
