@@ -4,6 +4,7 @@ import { setResponseHeader } from "@tanstack/react-start/server";
 import { renderErrorPage } from "./lib/error-page";
 import { SECURITY_HEADERS } from "@/lib/security-policy";
 import { shouldBlock } from "@/lib/hosting-lock";
+import { attachSupabaseAuth } from "@/integrations/supabase/auth-attacher";
 
 const securityMiddleware = createMiddleware().server(async ({ next }) => {
   for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
@@ -50,5 +51,6 @@ const csrfMiddleware = createCsrfMiddleware({
 });
 
 export const startInstance = createStart(() => ({
+  functionMiddleware: [attachSupabaseAuth],
   requestMiddleware: [hostingLockMiddleware, securityMiddleware, errorMiddleware, csrfMiddleware],
 }));
