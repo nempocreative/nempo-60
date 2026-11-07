@@ -1892,12 +1892,12 @@ export default function Home() {
             href="/event/musicomedy-night"
             className="group block w-full overflow-hidden rounded-3xl border border-border bg-card shadow-sm"
           >
-            <div className="flex flex-col sm:h-[360px] sm:flex-row">
-              <div className="relative aspect-[3/4] w-full shrink-0 overflow-hidden sm:h-full sm:w-auto sm:aspect-auto">
+            <div className="flex sm:h-[360px]">
+              <div className="relative aspect-[3/4] w-[210px] shrink-0 overflow-hidden sm:h-full sm:w-auto sm:aspect-auto">
                 <img
                   src={musicomedyPoster}
                   srcSet="/images/events/musicomedy-night-poster-540.webp 540w, /images/events/musicomedy-night-poster-810.webp 810w, /images/events/musicomedy-night-poster-1080.webp 1080w"
-                  sizes="(min-width: 640px) 270px, 300px"
+                  sizes="(min-width: 640px) 270px, 420px"
                   alt="Poster MusiComedy Night"
                   width={1440}
                   height={1920}
