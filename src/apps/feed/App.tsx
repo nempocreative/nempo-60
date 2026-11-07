@@ -100,6 +100,7 @@ import {
   GgsBeautyStorySlideTwo,
 } from './components/GgsBeautySlideOne';
 import { GgsBeautyStorySlideThree } from './components/GgsBeautyStorySlideThree';
+import { GgsStoryCoverSlide } from './components/GgsStoryCoverSlide';
 import { GgsBeautyContentSlide } from './components/GgsBeautyContentSlide';
 import { GgsCouponDesigner } from './components/GgsCouponDesigner';
 import { GgsQCardCover } from './components/GgsQCardCover';
@@ -2660,6 +2661,10 @@ function ClientFeedArtwork({
     return <GgsBeautyStorySlideThree exportRef={exportRef} />;
   }
 
+  if (isStory && slide === 4) {
+    return <GgsStoryCoverSlide exportRef={exportRef} />;
+  }
+
   if (!isStory && (slide === 2 || slide === 3)) {
     return <GgsBeautyContentSlide slide={slide} exportRef={exportRef} />;
   }
@@ -2837,7 +2842,7 @@ function App() {
         });
       } else if (
         (isGgsStory && activeClientSlide === 2) ||
-        (isGgsFeed &&
+        (activeFeed === 'client' &&
           (activeClientSlide === 4 ||
             activeClientSlide === 5 ||
             activeClientSlide === 6))
@@ -3032,7 +3037,7 @@ function App() {
       ? []
       : isGgsFeed
       ? isGgsStory
-        ? [1, 2, 3]
+        ? [1, 2, 3, 4]
         : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
       : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34];
   const selectedSlide =

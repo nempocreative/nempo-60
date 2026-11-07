@@ -13,6 +13,14 @@
   --ggl-line: #dbaabe;
   --ggl-photo-shade: linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--ggl-paper) 88%, transparent) 61%, var(--ggl-paper) 75%);
 }
+/* GGS Story cover (reels 9:16): brand palette for the cover slide. */
+.ggc-root {
+  --ggc-ink: #3d0b2a;
+  --ggc-light: #fff5fa;
+  --ggc-accent: #ffc9df;
+  --ggc-top-shade: linear-gradient(180deg, color-mix(in srgb, var(--ggc-ink) 62%, transparent) 0%, transparent 16%);
+  --ggc-bottom-shade: linear-gradient(180deg, transparent 52%, color-mix(in srgb, var(--ggc-ink) 70%, transparent) 70%, color-mix(in srgb, var(--ggc-ink) 88%, transparent) 100%);
+}
 .ggo-root {
   --ggo-ink: #4a0e33;
   --ggo-pink: #c2186b;
