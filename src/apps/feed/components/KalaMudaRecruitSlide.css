@@ -10,7 +10,7 @@
 .kmr-header { position: absolute; z-index: 6; top: 5cqw; left: 6cqw; right: 6cqw; display: flex; align-items: center; gap: 2.6cqw; }
 .kmr-logo {
   display: flex; align-items: center; justify-content: center; width: 9.5cqw; height: 9.5cqw;
-  border-radius: 2.6cqw; background: rgba(255, 255, 255, 0.95); padding: 1.2cqw;
+  border-radius: 2.6cqw; background: #062f4d; padding: 1.2cqw;
   box-shadow: 0 1.6cqw 3.6cqw rgba(2, 32, 56, 0.35);
 }
 .kmr-logo img { width: 100%; height: 100%; object-fit: contain; }
@@ -64,9 +64,9 @@
 }
 .kmi-title em { font-style: normal; color: var(--kmr-accent); }
 .kmi-block { position: absolute; z-index: 2; left: 7cqw; right: 7cqw; }
-.kmi-block-who { top: 32cqw; }
-.kmi-block-div { top: 51cqw; }
-.kmi-block-steps { top: 76cqw; }
+.kmi-block-who { top: 33cqw; }
+.kmi-block-div { top: 50cqw; }
+.kmi-block-steps { top: 80.5cqw; }
 .kmi-head {
   font-size: 3.1cqw; font-weight: 800; text-transform: uppercase; letter-spacing: .16em !important;
   color: var(--kmr-accent); text-align: center; margin-bottom: 2.2cqw; opacity: 0;
@@ -101,7 +101,7 @@
   color: #062f4d; font-size: 2.7cqw; font-weight: 800;
 }
 .kmi-cta {
-  position: absolute; z-index: 2; left: 7cqw; right: 7cqw; top: 112cqw; text-align: center;
+  position: absolute; z-index: 2; left: 7cqw; right: 7cqw; top: 113.5cqw; text-align: center;
   padding: 2.4cqw 3cqw; border-radius: 99px; background: var(--kmr-accent); color: #062f4d;
   font-size: 3.2cqw; font-weight: 700; opacity: 0;
   box-shadow: 0 1.6cqw 4cqw rgba(2, 32, 56, 0.4);
