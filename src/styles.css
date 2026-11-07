@@ -25,7 +25,7 @@
   --ggh-ink: #3d0b2a;
   --ggh-light: #fff5fa;
   --ggh-accent: #ffc9df;
-  --ggh-shade: linear-gradient(180deg, color-mix(in srgb, var(--ggh-ink) 52%, transparent) 0%, color-mix(in srgb, var(--ggh-ink) 30%, transparent) 22%, color-mix(in srgb, var(--ggh-ink) 76%, transparent) 46%, color-mix(in srgb, var(--ggh-ink) 88%, transparent) 64%, var(--ggh-ink) 88%);
+  --ggh-shade: linear-gradient(180deg, color-mix(in srgb, var(--ggh-ink) 40%, transparent) 0%, color-mix(in srgb, var(--ggh-ink) 44%, transparent) 30%, color-mix(in srgb, var(--ggh-ink) 62%, transparent) 56%, color-mix(in srgb, var(--ggh-ink) 78%, transparent) 76%, color-mix(in srgb, var(--ggh-ink) 86%, transparent) 100%);
 }
 /* GGS Feed slide 21 (3:4 video): nail art card deck palette. */
 .ggn-root {
