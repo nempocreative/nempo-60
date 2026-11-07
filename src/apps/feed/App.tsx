@@ -3234,7 +3234,7 @@ function App() {
                 <PrebuiltPngDownload
                   key={activeClientSlide}
                   src={GGS_LAYANAN_PNGS[activeClientSlide] ?? (activeClientSlide === 11 ? ggsPromoSpesialPng : activeClientSlide === 9 ? ggsNailPahlawanPng : ggsRatusBenefitPng)}
-                  fileName={GGS_LAYANAN_PNGS[activeClientSlide] ? `GGS-Feed-${activeClientSlide}-Layanan.png` : activeClientSlide === 11 ? 'GGS-Feed-11-Promo-Spesial.png' : activeClientSlide === 9 ? 'GGS-Feed-09-Nail-Art-Hari-Pahlawan.png' : 'GGS-Feed-08-Manfaat-Ratus.png'}
+                  fileName={GGS_LAYANAN_PNGS[activeClientSlide] ? `GGS-Feed-${activeClientSlide}-Layanan.png` : activeClientSlide === 11 ? 'GGS-Feed-11-Promo-Spesial.png' : activeClientSlide === 9 ? 'GGS-Feed-09-Open-Loker.png' : 'GGS-Feed-08-Manfaat-Ratus.png'}
                   label="Download PNG · 3×"
                   className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
                 />
