@@ -3,3 +3,7 @@
 - [x] Phase 1: Nempo Feed (/nempo-feed) with all slides, tabs, photos, videos, fonts and tests
 - [ ] Phase 2: NEMPO main site pages (waiting for the owner to ask)
 - [ ] Phase 3: CMS back-office, database and user accounts (waiting for the owner to ask)
+
+## GGS Feed tweaks
+- [ ] Use the new header/footer on slides 12–18 (slide 12 video re-recorded, 13–18 PNGs remade)
+- [ ] Make "Layanan Kami" smaller and lower on slides 13–18
