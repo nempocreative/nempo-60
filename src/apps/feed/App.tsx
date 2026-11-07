@@ -6,6 +6,7 @@ import ggsRatusVideo from '@/assets/ggs-feed-07-ratus-hq.mp4.asset.json';
 import ggsRatusBenefitPng from '@/assets/ggs-feed-08-ratus-manfaat.png';
 import ggsNailPahlawanPng from '@/assets/ggs-feed-09-nail-pahlawan.png';
 import ggsLokerPng from '@/assets/ggs-feed-19-loker.png';
+import ggsFeedKidPng from '@/assets/ggs-feed-20-peduli-penampilan.png.asset.json';
 import ggsStoryCoverPng from '@/assets/ggs-story-04-peduli-penampilan.png.asset.json';
 import ggsStoryCoverCenteredPng from '@/assets/ggs-story-05-peduli-penampilan-feed.png.asset.json';
 import ggsPromoSpesialPng from '@/assets/ggs-feed-11-promo-spesial.png';
@@ -112,6 +113,7 @@ import { Ggs2027Calendar } from './components/Ggs2027Calendar';
 import { GgsRatusBenefitSlide } from './components/GgsRatusBenefitSlide';
 import { GgsNailPahlawanSlide } from './components/GgsNailPahlawanSlide';
 import { GgsLokerSlide } from './components/GgsLokerSlide';
+import { GgsFeedKidSlide } from './components/GgsFeedKidSlide';
 import { GgsPromoSpesialSlide } from './components/GgsPromoSpesialSlide';
 import { GgsWeAreOpenSlide } from './components/GgsWeAreOpenSlide';
 import { GgsServicesSlide, GGS_SERVICES_SLIDES } from './components/GgsServicesSlide';
@@ -159,7 +161,7 @@ type FeedSlide =
   | 33
   | 34;
 
-type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19;
+type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20;
 
 const cafes = [
   {
@@ -2687,6 +2689,10 @@ function ClientFeedArtwork({
     return <GgsLokerSlide exportRef={exportRef} />;
   }
 
+  if (!isStory && slide === 20) {
+    return <GgsFeedKidSlide exportRef={exportRef} />;
+  }
+
   if (!isStory && slide === 10) {
     return <GgsPromoSpesialSlide exportRef={exportRef} />;
   }
@@ -3044,7 +3050,7 @@ function App() {
       : isGgsFeed
       ? isGgsStory
         ? [1, 2, 3, 4, 5]
-        : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
       : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
@@ -3259,12 +3265,12 @@ function App() {
                   PNG 3240×5760. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”; jika gambar terbuka, tekan lama lalu Simpan.
                 </p>
               </>
-            ) : activeFeed === 'client' && (activeClientSlide === 8 || activeClientSlide === 9 || activeClientSlide === 11 || activeClientSlide === 19 || GGS_LAYANAN_PNGS[activeClientSlide]) ? (
+            ) : activeFeed === 'client' && (activeClientSlide === 8 || activeClientSlide === 9 || activeClientSlide === 11 || activeClientSlide === 19 || activeClientSlide === 20 || GGS_LAYANAN_PNGS[activeClientSlide]) ? (
               <>
                 <PrebuiltPngDownload
                   key={activeClientSlide}
-                  src={GGS_LAYANAN_PNGS[activeClientSlide] ?? (activeClientSlide === 11 ? ggsPromoSpesialPng : activeClientSlide === 9 ? ggsNailPahlawanPng : activeClientSlide === 19 ? ggsLokerPng : ggsRatusBenefitPng)}
-                  fileName={GGS_LAYANAN_PNGS[activeClientSlide] ? `GGS-Feed-${activeClientSlide}-Layanan.png` : activeClientSlide === 11 ? 'GGS-Feed-11-Promo-Spesial.png' : activeClientSlide === 9 ? 'GGS-Feed-09-Nail-Art-Hari-Pahlawan.png' : activeClientSlide === 19 ? 'GGS-Feed-19-Open-Loker.png' : 'GGS-Feed-08-Manfaat-Ratus.png'}
+                  src={GGS_LAYANAN_PNGS[activeClientSlide] ?? (activeClientSlide === 11 ? ggsPromoSpesialPng : activeClientSlide === 9 ? ggsNailPahlawanPng : activeClientSlide === 19 ? ggsLokerPng : activeClientSlide === 20 ? ggsFeedKidPng.url : ggsRatusBenefitPng)}
+                  fileName={GGS_LAYANAN_PNGS[activeClientSlide] ? `GGS-Feed-${activeClientSlide}-Layanan.png` : activeClientSlide === 11 ? 'GGS-Feed-11-Promo-Spesial.png' : activeClientSlide === 9 ? 'GGS-Feed-09-Nail-Art-Hari-Pahlawan.png' : activeClientSlide === 19 ? 'GGS-Feed-19-Open-Loker.png' : activeClientSlide === 20 ? 'GGS-Feed-20-Peduli-Penampilan.png' : 'GGS-Feed-08-Manfaat-Ratus.png'}
                   label="Download PNG · 3×"
                   className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
                 />

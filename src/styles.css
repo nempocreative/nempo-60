@@ -13,6 +13,13 @@
   --ggl-line: #dbaabe;
   --ggl-photo-shade: linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--ggl-paper) 88%, transparent) 61%, var(--ggl-paper) 75%);
 }
+/* GGS Feed slide 20 (3:4): feed version of the story cover, same palette. */
+.ggk-root {
+  --ggk-ink: #3d0b2a;
+  --ggk-light: #fff5fa;
+  --ggk-accent: #ffc9df;
+  --ggk-shade: linear-gradient(180deg, color-mix(in srgb, var(--ggk-light) 78%, transparent) 0%, color-mix(in srgb, var(--ggk-light) 40%, transparent) 9%, transparent 17%, transparent 52%, color-mix(in srgb, var(--ggk-ink) 62%, transparent) 70%, color-mix(in srgb, var(--ggk-ink) 88%, transparent) 88%, var(--ggk-ink) 100%);
+}
 /* GGS Story cover (reels 9:16): brand palette for the cover slide. */
 .ggc-root {
   --ggc-ink: #3d0b2a;
