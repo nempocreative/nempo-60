@@ -4,7 +4,7 @@ import type { Database } from '@/integrations/supabase/types';
 export type Entity = Record<string, unknown> & { id?: number | string };
 type Tables = Database['public']['Tables'];
 // Falls back to plain string while the database schema is still empty (tables not migrated yet).
-type TableName = string extends keyof Tables ? string : keyof Tables;
+type TableName = [keyof Tables] extends [never] ? string : keyof Tables;
 
 const USER_KEY = 'nempo_garut_admin_user';
 let cachedToken = '';
