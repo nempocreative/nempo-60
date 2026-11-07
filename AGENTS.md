@@ -30,6 +30,7 @@ use the editor.
 <!-- LOVABLE:END -->
 
 ## Architecture rules
+- GGS Feed slide 23 plays pointer-backed rear-view hairstyle footage in its top band and exports an 8-second branded 1080×1440 MP4 composited with its preview overlay; regenerate the MP4 when layout or footage changes so downloads match playback.
 - GGS Cowok is an independent feed tab using GgsMenHairCardsSlide and the shared 15-second GGS carousel with optional overlay/theme props; record its pointer-only MP4 from the preview at 2×, 1080×1440/30 fps/CRF 11, whenever it changes, so men's branding never modifies women's slides.
 - This project is being migrated in phases from nempocreative/remix-of-nempo-62; phase 1 moved only the Nempo Feed app (`src/apps/feed`, mounted at `/nempo-feed`), and `/` redirects there until the main site is migrated; why: the owner asked for the feed first.
 - Media pointers under `src/assets/` must belong to this project's own storage (re-upload with `lovable-assets create` when bringing files from another project); why: a foreign project's pointer breaks once published.
