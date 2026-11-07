@@ -32,6 +32,19 @@
   --ggn-card-shadow: 0 2.4cqw 6cqw color-mix(in srgb, #7a1f4f 26%, transparent), 0 .4cqw 1.2cqw color-mix(in srgb, #7a1f4f 14%, transparent);
   --ggn-sheen: linear-gradient(105deg, transparent 30%, color-mix(in srgb, #ffffff 55%, transparent) 50%, transparent 70%);
 }
+/* Nempo Feed slides 35–36 (3:4 video): Kala Muda recruitment palette. */
+.kmr-root {
+  --kmr-ink: #062f4d;
+  --kmr-accent: #ffdd00;
+  --kmr-accent-soft: #ffe97a;
+  --kmr-accent-deep: #0b6fb8;
+  --kmr-paper: #e8f4fd;
+  --kmr-card: #ffffff;
+  --kmr-bg: linear-gradient(160deg, #12a8f8 0%, #058fe7 42%, #006daf 78%, #065a8c 100%);
+  --kmr-glow: radial-gradient(circle at 50% 64%, color-mix(in srgb, #ffffff 22%, transparent) 0%, transparent 48%);
+  --kmr-card-shadow: 0 2.4cqw 6cqw color-mix(in srgb, #022038 40%, transparent), 0 .4cqw 1.2cqw color-mix(in srgb, #022038 24%, transparent);
+  --kmr-sheen: linear-gradient(105deg, transparent 30%, color-mix(in srgb, #ffffff 55%, transparent) 50%, transparent 70%);
+}
 /* GGS Story cover (reels 9:16): brand palette for the cover slide. */
 .ggc-root {
   --ggc-ink: #3d0b2a;
