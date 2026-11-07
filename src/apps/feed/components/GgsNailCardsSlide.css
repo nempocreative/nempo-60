@@ -12,7 +12,7 @@
   font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 6.4cqw; line-height: 1.1; white-space: nowrap;
 }
 .ggn-title em { font-style: italic; font-weight: 500; color: var(--ggn-accent); }
-.ggn-stage { position: absolute; inset: 0; z-index: 3; perspective: 140cqw; }
+.ggn-stage { position: absolute; inset: 0; z-index: 3; perspective: 140cqw; transform-style: preserve-3d; }
 .ggn-card {
   position: absolute; left: 26cqw; top: 35cqw; width: 48cqw; padding: 1.8cqw 1.8cqw 0; border-radius: 2.4cqw;
   background: var(--ggn-card); box-shadow: var(--ggn-card-shadow); transform-origin: 50% 60%;
@@ -40,4 +40,4 @@
   animation-duration: 15s; animation-iteration-count: infinite; animation-fill-mode: both; animation-timing-function: ease-in-out;
 }
 .ggn-root.is-paused *, .ggn-root.is-paused *::before { animation-play-state: paused !important; }
-.ggn-root.is-reduced * { animation-delay: -13.4s !important; animation-play-state: paused !important; }
+.ggn-root.is-reduced * { animation-delay: -13.5s !important; animation-play-state: paused !important; }
