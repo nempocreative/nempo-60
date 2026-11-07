@@ -7,3 +7,5 @@
 ## GGS Feed tweaks
 - [x] Use the new header/footer on slides 12–18 (slide 12 video re-recorded, 13–18 PNGs remade)
 - [x] Make "Layanan Kami" smaller and lower on slides 13–18
+- [x] Remove "Lowongan Kerja" kicker from slide 19
+- [x] Slide 19 background: combine the 3 uploaded staff photos, pink blazers like slide 12
