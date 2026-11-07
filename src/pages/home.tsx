@@ -1923,7 +1923,7 @@ export default function Home() {
                     </span>
                   )}
                 </div>
-                <h3 className="text-2xl font-black leading-tight text-foreground sm:text-3xl lg:text-4xl">MusiComedy Night</h3>
+                <h3 className="text-xl font-black leading-tight text-foreground sm:text-3xl lg:text-4xl">MusiComedy Night</h3>
                 <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/15 bg-primary/5 py-1 pl-1.5 pr-3.5">
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
                     <Mic className="h-3.5 w-3.5" strokeWidth={2} />
