@@ -13,3 +13,8 @@
 
 ## GGS Story
 - [x] Reels-size cover slide (04) in the GGS Story tab using the owner's new story header/footer
+
+## Kala Muda recruitment
+- [ ] Add NEMPO Feed slide 35 with animated team photo cards.
+- [ ] Add slide 36 with existing Kala Muda requirements, divisions and registration details.
+- [ ] Produce and connect both MP4 downloads; check desktop and phone playback.
