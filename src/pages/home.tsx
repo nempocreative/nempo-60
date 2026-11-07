@@ -1919,7 +1919,7 @@ export default function Home() {
                 <h3 className="text-lg font-black leading-tight text-foreground sm:text-3xl lg:text-4xl">MusiComedy Night</h3>
                 <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-primary/15 bg-primary/5 py-0.5 pl-1 pr-2.5 sm:gap-2 sm:py-1 sm:pl-1.5 sm:pr-3.5">
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground sm:h-6 sm:w-6">
-                    <Mic className="h-3 w-3 strokeWidth={2}" strokeWidth={2} />
+                    <Mic className="h-3 w-3" strokeWidth={2} />
                   </span>
                   <p className="text-[12px] font-bold leading-tight text-foreground sm:text-[13px]">
                     bersama <span className="font-black">Saduli Ragap</span>
