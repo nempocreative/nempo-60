@@ -1892,8 +1892,8 @@ export default function Home() {
             href="/event/musicomedy-night"
             className="group block w-full overflow-hidden rounded-3xl border border-border bg-card shadow-sm"
           >
-            <div className="flex sm:h-[360px]">
-              <div className="relative aspect-[3/4] w-[150px] shrink-0 overflow-hidden sm:h-full sm:w-auto">
+            <div className="flex flex-col sm:h-[360px] sm:flex-row">
+              <div className="relative aspect-[3/4] w-full shrink-0 overflow-hidden sm:h-full sm:w-auto sm:aspect-auto">
                 <img
                   src={musicomedyPoster}
                   srcSet="/images/events/musicomedy-night-poster-540.webp 540w, /images/events/musicomedy-night-poster-810.webp 810w, /images/events/musicomedy-night-poster-1080.webp 1080w"
@@ -1906,30 +1906,30 @@ export default function Home() {
                   decoding="async"
                 />
               </div>
-              <div className="flex flex-1 flex-col justify-center gap-2 p-4 sm:gap-3 sm:p-8 lg:p-10">
-                <div className="flex flex-wrap items-center gap-2">
-                  <p className="text-xs font-bold uppercase tracking-wider text-primary">Rabu, 4 November 2026</p>
-                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-primary">Gratis</span>
+              <div className="flex flex-1 flex-col justify-center gap-1.5 p-3.5 sm:gap-3 sm:p-8 lg:p-10">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-primary sm:text-xs">Rabu, 4 November 2026</p>
+                  <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-primary sm:px-2.5 sm:text-[11px]">Gratis</span>
                   {eventFinished && (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-muted-foreground">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:px-2.5 sm:text-[11px]">
                       <History className="h-3 w-3" strokeWidth={2} /> Selesai
                     </span>
                   )}
                 </div>
-                <h3 className="text-xl font-black leading-tight text-foreground sm:text-3xl lg:text-4xl">MusiComedy Night</h3>
-                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/15 bg-primary/5 py-1 pl-1.5 pr-3.5">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                    <Mic className="h-3.5 w-3.5" strokeWidth={2} />
+                <h3 className="text-lg font-black leading-tight text-foreground sm:text-3xl lg:text-4xl">MusiComedy Night</h3>
+                <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-primary/15 bg-primary/5 py-0.5 pl-1 pr-2.5 sm:gap-2 sm:py-1 sm:pl-1.5 sm:pr-3.5">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground sm:h-6 sm:w-6">
+                    <Mic className="h-3 w-3" strokeWidth={2} />
                   </span>
-                  <p className="text-[13px] font-bold leading-tight text-foreground sm:text-sm">
+                  <p className="text-[12px] font-bold leading-tight text-foreground sm:text-[13px]">
                     bersama <span className="font-black">Saduli Ragap</span>
                   </p>
                 </div>
 
-                <p className="max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <p className="max-w-lg text-[13px] leading-relaxed text-muted-foreground sm:text-sm sm:leading-relaxed lg:text-base">
                   Malam musik dan komedi bareng NEMPO.ID × Kala Muda di Good Story Cafe.
                 </p>
-                <span className="mt-1 inline-flex w-fit items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
+                <span className="mt-0.5 inline-flex w-fit items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-[13px] font-bold text-primary-foreground sm:mt-1 sm:px-4 sm:py-2 sm:text-sm">
                   Lihat detail event
                   <ChevronRight className="h-4 w-4" />
                 </span>
