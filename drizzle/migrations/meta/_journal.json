@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794057936203,
+      "tag": "0000_create_nempo_site_tables",
+      "breakpoints": true
+    }
+  ]
 }
