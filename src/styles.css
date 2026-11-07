@@ -23,9 +23,10 @@
 /* GGS Feed slide 23 (3:4): "We are open" opening-hours palette. */
 .ggh-root {
   --ggh-ink: #3d0b2a;
-  --ggh-light: #fff5fa;
-  --ggh-accent: #ffc9df;
-  --ggh-shade: linear-gradient(180deg, color-mix(in srgb, var(--ggh-ink) 40%, transparent) 0%, color-mix(in srgb, var(--ggh-ink) 44%, transparent) 30%, color-mix(in srgb, var(--ggh-ink) 62%, transparent) 56%, color-mix(in srgb, var(--ggh-ink) 78%, transparent) 76%, color-mix(in srgb, var(--ggh-ink) 86%, transparent) 100%);
+  --ggh-paper: #fff5fa;
+  --ggh-primary: #a51d5d;
+  --ggh-accent: #c2457f;
+  --ggh-fade: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--ggh-paper) 72%, transparent) 62%, var(--ggh-paper) 100%);
 }
 /* GGS Feed slide 21 (3:4 video): nail art card deck palette. */
 .ggn-root {
