@@ -10,10 +10,6 @@ export function GgsLokerSlide({ exportRef }: { exportRef?: RefObject<HTMLElement
       <img className="ggl-photo" src={nailPhoto} alt="Kuku nail art" />
       <div className="ggl-shade" />
       <section className="ggl-copy">
-        <p className="ggl-kicker">
-          <span className="ggl-dot" aria-hidden="true" />
-          Lowongan Kerja
-        </p>
         <h2 className="ggl-title">
           Open <em>Loker</em>
         </h2>

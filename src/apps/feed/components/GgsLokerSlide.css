@@ -6,9 +6,7 @@
   linear-gradient(180deg,rgba(40,10,25,.35) 0%,rgba(40,10,25,0) 14%),
   radial-gradient(ellipse 80% 34% at 22% 26%,rgba(255,236,245,.95) 0%,rgba(255,236,245,.82) 45%,rgba(255,236,245,0) 100%)}
 .ggl-copy{position:absolute;z-index:2;left:7cqw;top:23cqw;width:70cqw}
-.ggl-kicker{margin:0;display:flex;align-items:center;gap:2cqw;font-size:2.8cqw;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
-.ggl-dot{flex:none;width:2.6cqw;height:2.6cqw;border-radius:50%;background:#c2186b;box-shadow:0 0 0 .8cqw rgba(194,24,107,.18)}
-.ggl-title{margin:1.4cqw 0 0;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:10.5cqw;line-height:1.02;color:#c2186b}
+.ggl-title{margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:10.5cqw;line-height:1.02;color:#c2186b}
 .ggl-title em{display:inline;white-space:nowrap;font-style:italic;font-weight:500;color:#b3122b}
 .ggl-sub{margin:2.6cqw 0 0;font-size:3.6cqw;font-weight:600;opacity:.85}
 .ggl-roles{margin:4cqw 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:2.2cqw}
