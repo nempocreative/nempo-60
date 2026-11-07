@@ -11,7 +11,7 @@
   --ggl-primary: #a51d5d;
   --ggl-paper: #fff5fa;
   --ggl-line: #dbaabe;
-  --ggl-photo-shade: linear-gradient(180deg, transparent 47%, color-mix(in srgb, var(--ggl-paper) 88%, transparent) 68%, var(--ggl-paper) 82%);
+  --ggl-photo-shade: linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--ggl-paper) 88%, transparent) 61%, var(--ggl-paper) 75%);
 }
 .ggo-root {
   --ggo-ink: #4a0e33;
