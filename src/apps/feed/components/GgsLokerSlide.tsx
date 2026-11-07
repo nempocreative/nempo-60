@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import nailPhoto from '@/assets/ggs-nail-pahlawan.jpg';
+import teamPhoto from '@/assets/ggs-loker-team-pink.jpg';
 import ggsWatermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import './GgsLokerSlide.css';
 
@@ -7,7 +7,7 @@ import './GgsLokerSlide.css';
 export function GgsLokerSlide({ exportRef }: { exportRef?: RefObject<HTMLElement | null> }) {
   return (
     <div ref={exportRef as RefObject<HTMLDivElement | null>} className="ggl-root">
-      <img className="ggl-photo" src={nailPhoto} alt="Kuku nail art" />
+      <img className="ggl-photo" src={teamPhoto} alt="Tim GGS Beauty berseragam jas pink" />
       <div className="ggl-shade" />
       <section className="ggl-copy">
         <h2 className="ggl-title">
