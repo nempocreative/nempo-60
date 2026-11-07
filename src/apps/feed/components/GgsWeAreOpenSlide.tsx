@@ -3,7 +3,7 @@ import { Pause, Play, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import welcomeVideo from '@/assets/ggs-open-welcome-motion.mp4';
 import welcomePhoto from '@/assets/ggs-we-are-open-pink.jpg';
-import watermark from '@/assets/ggs-header-footer.png.asset.json';
+import watermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import './GgsWeAreOpenSlide.css';
 
 export function GgsWeAreOpenSlide({ exportRef }: { exportRef?: RefObject<HTMLElement | null> }) {

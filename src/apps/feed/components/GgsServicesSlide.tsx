@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import ggsWatermark from '@/assets/ggs-header-footer.png.asset.json';
+import ggsWatermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import './GgsServicesSlide.css';
 
 type ServiceGroup = {
