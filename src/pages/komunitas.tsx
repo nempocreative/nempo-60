@@ -35,6 +35,10 @@ import kegiatanMakan from "@/assets/kalamuda-kegiatan-makan-bersama.webp";
 import kegiatanPodcast from "@/assets/kalamuda-kegiatan-podcast-malam.webp";
 import kegiatanAkustik from "@/assets/kalamuda-kegiatan-akustik.webp";
 import kegiatanTari from "@/assets/kalamuda-kegiatan-tari-musicomedy.webp";
+import kegiatanNongkrongOutdoor from "@/assets/kalamuda-kegiatan-nongkrong-outdoor.jpg.asset.json";
+import kegiatanBasecamp from "@/assets/kalamuda-kegiatan-basecamp.jpg.asset.json";
+import kegiatanGoodStory from "@/assets/kalamuda-kegiatan-good-story-cafe.jpg.asset.json";
+import kegiatanHunting from "@/assets/kalamuda-kegiatan-hunting-foto.jpg.asset.json";
 
 const kegiatanPhotos = [
   { src: kegiatanDapoer, caption: "Dapoer Nyunda", tag: "Kuliner" },
@@ -42,6 +46,10 @@ const kegiatanPhotos = [
   { src: kegiatanPodcast, caption: "Rekaman podcast malam", tag: "Kreator" },
   { src: kegiatanAkustik, caption: "Jamming akustik", tag: "Musik" },
   { src: kegiatanTari, caption: "Tari di MusiComedy Night", tag: "Tari" },
+  { src: kegiatanNongkrongOutdoor.url, caption: "Nongkrong sore bareng", tag: "Kebersamaan" },
+  { src: kegiatanBasecamp.url, caption: "Kumpul di basecamp", tag: "Kebersamaan" },
+  { src: kegiatanGoodStory.url, caption: "Nongkrong di Good Story Cafe", tag: "Nongkrong" },
+  { src: kegiatanHunting.url, caption: "Foto bareng satu tim", tag: "Kebersamaan" },
 ];
 
 // Kategori asal — sama dengan pilihan "Asal" di formulir pendaftaran.
