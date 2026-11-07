@@ -5,7 +5,7 @@
 - [ ] Phase 3: CMS back-office, database and user accounts (waiting for the owner to ask)
 
 ## GGS Feed tweaks
-- [ ] Add GGS Cowok tab with men's hairstyles, supplied overlay, slide 22 animation and MP4 download.
+- [x] Add GGS Cowok tab with men's hairstyles, supplied overlay, slide 22 animation and MP4 download.
 - [x] Use the new header/footer on slides 12–18 (slide 12 video re-recorded, 13–18 PNGs remade)
 - [x] Make "Layanan Kami" smaller and lower on slides 13–18
 - [x] Remove "Lowongan Kerja" kicker from slide 19
