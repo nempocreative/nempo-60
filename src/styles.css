@@ -19,7 +19,7 @@
   --ggc-light: #fff5fa;
   --ggc-accent: #ffc9df;
   --ggc-top-shade: linear-gradient(180deg, color-mix(in srgb, var(--ggc-ink) 62%, transparent) 0%, transparent 16%);
-  --ggc-bottom-shade: linear-gradient(180deg, transparent 52%, color-mix(in srgb, var(--ggc-ink) 70%, transparent) 70%, color-mix(in srgb, var(--ggc-ink) 88%, transparent) 100%);
+  --ggc-bottom-shade: linear-gradient(180deg, transparent 66%, color-mix(in srgb, var(--ggc-ink) 66%, transparent) 78%, color-mix(in srgb, var(--ggc-ink) 88%, transparent) 100%);
 }
 .ggo-root {
   --ggo-ink: #4a0e33;

@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import teamPhoto from '@/assets/ggs-team-professional-pink.jpg';
+import kidPhoto from '@/assets/ggs-story-kid-nails.jpg';
 import storyOverlay from '@/assets/ggs-story-header-footer.png.asset.json';
 import './GgsStoryCoverSlide.css';
 
@@ -8,18 +8,22 @@ export function GgsStoryCoverSlide({ exportRef }: { exportRef?: RefObject<HTMLEl
   return (
     <main
       ref={exportRef as RefObject<HTMLElement | null>}
-      aria-label="GGS Beauty — Story slide 04, sampul reels"
+      aria-label="GGS Beauty — Story slide 04, peduli penampilan dari kecil"
       className="ggc-root"
     >
-      <img className="ggc-photo" src={teamPhoto} alt="Tim GGS Beauty berseragam jas pink" />
+      <img
+        className="ggc-photo"
+        src={kidPhoto}
+        alt="Anak memamerkan nail art bunga sambil memegang coaster GGS Studio Beauty"
+      />
       <div className="ggc-shade" />
       <section className="ggc-copy">
+        <span className="ggc-rule" aria-hidden="true" />
         <h2 className="ggc-title">
-          GGS <em>Beauty</em>
+          <span>Peduli Penampilan</span>
+          <em>dari Kecil</em>
         </h2>
         <span className="ggc-rule" aria-hidden="true" />
-        <p className="ggc-sub">Salon &amp; Spa</p>
-        <p className="ggc-place">Jl. Cimanuk No. 309, Sukagalih, Garut</p>
       </section>
       <img className="ggc-overlay" src={storyOverlay.url} alt="" aria-hidden="true" />
     </main>
