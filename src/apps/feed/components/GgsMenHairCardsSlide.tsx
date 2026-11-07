@@ -17,7 +17,7 @@ const MEN_CARDS: DesignCard[] = [
 
 export function GgsMenHairCardsSlide({ exportRef }: { exportRef?: RefObject<HTMLElement | null> }) {
   return <GgsNailCardsSlide exportRef={exportRef} cards={MEN_CARDS}
-    title={<>Pilih Gaya Rambut <em>Cowokmu</em></>}
+    title={<>Pilih Model Rambut <em>Cowok</em></>}
     finalNote="Tunjukkan pilihanmu ke barber saat booking."
     label="Pilihan rambut cowok" slideNumber={1} overlay={overlay.url} theme="men" />;
 }

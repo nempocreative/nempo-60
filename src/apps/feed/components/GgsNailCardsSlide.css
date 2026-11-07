@@ -41,7 +41,7 @@
 }
 .ggn-root.is-paused *, .ggn-root.is-paused *::before { animation-play-state: paused !important; }
 .ggn-root.is-reduced * { animation-delay: -13.5s !important; animation-play-state: paused !important; }
-.ggn-men .ggn-title { font-family: 'DM Sans', sans-serif; font-weight: 800; font-size: 5.8cqw; }
+.ggn-men .ggn-title { font-family: 'DM Sans', sans-serif; font-weight: 800; font-size: 5.8cqw; color: var(--ggn-ink); }
 .ggn-men .ggn-title em { font-style: normal; font-weight: 800; }
 .ggn-men .ggn-num { font-family: 'DM Sans', sans-serif; font-style: normal; font-weight: 700; }
 .ggn-men .ggn-name { letter-spacing: 0 !important; }
