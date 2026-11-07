@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Beauty Heaven';
-  src: url('@assets/beauty-heaven.ttf') format('truetype');
+  src: url('../../assets/beauty-heaven.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Melon Tea';
-  src: url('@assets/melon-tea.otf') format('opentype');
+  src: url('../../assets/melon-tea.otf') format('opentype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: 'Beauty Autumn';
-  src: url('@assets/beauty-autumn.ttf') format('truetype');
+  src: url('../../assets/beauty-autumn.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
