@@ -1893,20 +1893,27 @@ export default function Home() {
             className="group block w-full overflow-hidden rounded-3xl border border-border bg-card shadow-sm"
           >
             <div className="flex flex-col sm:h-[360px] sm:flex-row">
-              <div className="relative aspect-[3/4] w-full shrink-0 overflow-hidden sm:h-full sm:w-auto">
+              <div className="relative h-[240px] w-full shrink-0 overflow-hidden sm:h-full sm:w-auto">
+                <img
+                  src={musicomedyPoster}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl sm:hidden"
+                  decoding="async"
+                />
                 <img
                   src={musicomedyPoster}
                   srcSet="/images/events/musicomedy-night-poster-540.webp 540w, /images/events/musicomedy-night-poster-810.webp 810w, /images/events/musicomedy-night-poster-1080.webp 1080w"
-                  sizes="(min-width: 640px) 270px, 100vw"
+                  sizes="(min-width: 640px) 270px, 480px"
                   alt="Poster MusiComedy Night"
                   width={1440}
                   height={1920}
-                  className="h-full w-full object-contain"
+                  className="relative h-full w-full object-contain"
                   loading="eager"
                   decoding="async"
                 />
               </div>
-              <div className="flex flex-1 flex-col justify-center gap-2 p-5 sm:gap-3 sm:p-8 lg:p-10">
+              <div className="flex flex-1 flex-col justify-center gap-2 p-4 sm:gap-3 sm:p-8 lg:p-10">
                 <div className="flex flex-wrap items-center gap-2">
                   <p className="text-xs font-bold uppercase tracking-wider text-primary">Rabu, 4 November 2026</p>
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-primary">Gratis</span>
