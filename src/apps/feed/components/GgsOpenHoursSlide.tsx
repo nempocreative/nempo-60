@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import salonPhoto from '@/assets/ggs-we-are-open-pink.jpg';
+import salonPhoto from '@/assets/ggs-open-hours-hair.jpg';
 import ggsWatermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import './GgsOpenHoursSlide.css';
 
@@ -14,7 +14,10 @@ export function GgsOpenHoursSlide({ exportRef }: { exportRef?: RefObject<HTMLEle
       <img
         className="ggh-photo"
         src={salonPhoto}
-        alt="Ruangan salon GGS Beauty dengan nuansa pink"
+        alt="Tiga perempuan dari belakang dengan rambut lurus, keriting, dan blow di salon GGS Beauty"
+        loading="lazy"
+        width={1088}
+        height={1440}
       />
       <div className="ggh-fade" />
       <section className="ggh-copy">
