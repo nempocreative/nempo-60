@@ -1,11 +1,11 @@
 {
-  "asset_id": "5595fa7d-aa12-4872-b01d-b4f8db7f334b",
-  "content_type": "video/mp4",
-  "created_at": "2026-11-06T12:58:18Z",
+  "version": 1,
+  "asset_id": "bc76dded-2adc-46b2-87df-882fc174a3be",
+  "project_id": "46592bad-4f77-4f4c-84f2-6788c6e08c47",
+  "url": "/__l5e/assets-v1/bc76dded-2adc-46b2-87df-882fc174a3be/ggs-feed-08-ratus.mp4",
+  "r2_key": "a/v1/46592bad-4f77-4f4c-84f2-6788c6e08c47/bc76dded-2adc-46b2-87df-882fc174a3be/ggs-feed-08-ratus.mp4",
   "original_filename": "ggs-feed-08-ratus.mp4",
-  "project_id": "cbcaa73b-da46-4579-b35a-22f7c1072cf3",
-  "r2_key": "a/v1/cbcaa73b-da46-4579-b35a-22f7c1072cf3/5595fa7d-aa12-4872-b01d-b4f8db7f334b/ggs-feed-08-ratus.mp4",
   "size": 2399833,
-  "url": "/__l5e/assets-v1/5595fa7d-aa12-4872-b01d-b4f8db7f334b/ggs-feed-08-ratus.mp4",
-  "version": 1
+  "content_type": "video/mp4",
+  "created_at": "2026-11-07T06:54:41Z"
 }

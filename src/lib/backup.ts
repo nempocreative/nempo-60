@@ -1,6 +1,8 @@
 import type { Database } from "@/integrations/supabase/types";
 
-type TableName = keyof Database["public"]["Tables"];
+type Tables = Database["public"]["Tables"];
+// Falls back to plain string while the database schema is still empty (tables not migrated yet).
+type TableName = [keyof Tables] extends [never] ? string : keyof Tables;
 
 /** Every table in the database. Adding a table to the database without listing it here fails the type check. */
 export const BACKUP_TABLES = [
@@ -27,7 +29,7 @@ export const BACKUP_TABLES = [
 ] as const satisfies readonly TableName[];
 
 // user_roles holds admin access grants and is deliberately never exported.
-type MissingTables = Exclude<TableName, (typeof BACKUP_TABLES)[number] | "user_roles">;
+type MissingTables = Exclude<keyof Tables, (typeof BACKUP_TABLES)[number] | "user_roles">;
 // Compile-time guard: errors when a database table is missing from BACKUP_TABLES.
 const _allTablesCovered: [MissingTables] extends [never] ? true : MissingTables = true;
 void _allTablesCovered;
