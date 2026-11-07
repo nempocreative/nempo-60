@@ -42,10 +42,10 @@ function stackPose(depth: number): DeckPose {
 
 const FLING_POSE: DeckPose = { tx: 82, ty: -8, rot: 24, scale: 1.03, opacity: 0 };
 const fanPose = (card: number): DeckPose => ({
-  tx: (card - 2) * 15.5,
+  tx: (card - 2) * 13,
   ty: 3,
-  rot: (card - 2) * 8,
-  scale: 0.8,
+  rot: (card - 2) * 7,
+  scale: 0.74,
   opacity: 1,
 });
 
