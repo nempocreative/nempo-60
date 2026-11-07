@@ -9,3 +9,4 @@
 - [x] Make "Layanan Kami" smaller and lower on slides 13–18
 - [x] Remove "Lowongan Kerja" kicker from slide 19
 - [x] Slide 19 background: combine the 3 uploaded staff photos, pink blazers like slide 12
+- [x] Refine slide 19 photo with natural makeup and preserved faces, professional typography, and regenerate its PNG

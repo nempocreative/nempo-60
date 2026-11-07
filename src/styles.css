@@ -6,6 +6,13 @@
 @custom-variant dark (&:is(.dark *));
 
 /* GGS open slide: shared brand palette, separate from other feeds. */
+.ggl-root {
+  --ggl-ink: #4a0e33;
+  --ggl-primary: #a51d5d;
+  --ggl-paper: #fff5fa;
+  --ggl-line: #dbaabe;
+  --ggl-photo-shade: linear-gradient(180deg, transparent 47%, color-mix(in srgb, var(--ggl-paper) 88%, transparent) 68%, var(--ggl-paper) 82%);
+}
 .ggo-root {
   --ggo-ink: #4a0e33;
   --ggo-pink: #c2186b;

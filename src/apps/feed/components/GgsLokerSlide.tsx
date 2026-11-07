@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import teamPhoto from '@/assets/ggs-loker-team-pink.jpg';
+import teamPhoto from '@/assets/ggs-team-professional-pink.jpg';
 import ggsWatermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import './GgsLokerSlide.css';
 
@@ -11,7 +11,7 @@ export function GgsLokerSlide({ exportRef }: { exportRef?: RefObject<HTMLElement
       <div className="ggl-shade" />
       <section className="ggl-copy">
         <h2 className="ggl-title">
-          Open <em>Loker</em>
+          Open Loker
         </h2>
         <p className="ggl-sub">Gabung jadi bagian tim GGS Beauty Salon &amp; Spa.</p>
         <ul className="ggl-roles">
