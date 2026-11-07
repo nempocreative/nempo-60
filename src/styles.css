@@ -20,6 +20,18 @@
   --ggk-accent: #ffc9df;
   --ggk-shade: linear-gradient(180deg, color-mix(in srgb, var(--ggk-light) 78%, transparent) 0%, color-mix(in srgb, var(--ggk-light) 40%, transparent) 9%, transparent 17%, transparent 52%, color-mix(in srgb, var(--ggk-ink) 62%, transparent) 70%, color-mix(in srgb, var(--ggk-ink) 88%, transparent) 88%, var(--ggk-ink) 100%);
 }
+/* GGS Feed slide 21 (3:4 video): nail art card deck palette. */
+.ggn-root {
+  --ggn-ink: #3d0b2a;
+  --ggn-ink-soft: #7a3a5c;
+  --ggn-accent: #c2457f;
+  --ggn-paper: #fff5fa;
+  --ggn-card: #ffffff;
+  --ggn-bg: linear-gradient(180deg, #fff7fb 0%, #fbe3ee 55%, #f5cfe0 100%);
+  --ggn-glow: radial-gradient(circle at 50% 66%, color-mix(in srgb, #ffffff 85%, transparent) 0%, transparent 46%);
+  --ggn-card-shadow: 0 2.4cqw 6cqw color-mix(in srgb, #7a1f4f 26%, transparent), 0 .4cqw 1.2cqw color-mix(in srgb, #7a1f4f 14%, transparent);
+  --ggn-sheen: linear-gradient(105deg, transparent 30%, color-mix(in srgb, #ffffff 55%, transparent) 50%, transparent 70%);
+}
 /* GGS Story cover (reels 9:16): brand palette for the cover slide. */
 .ggc-root {
   --ggc-ink: #3d0b2a;
