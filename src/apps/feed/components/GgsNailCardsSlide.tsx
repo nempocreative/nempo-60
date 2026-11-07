@@ -1,4 +1,4 @@
-import { useEffect, useState, type RefObject } from 'react';
+import { useEffect, useState, type ReactNode, type RefObject } from 'react';
 import { Pause, Play, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import frenchPhoto from '@/assets/ggs-nail-card-french.jpg';
@@ -10,7 +10,9 @@ import watermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import { buildNailCardsCss, NAIL_CARDS_DURATION } from './ggs-nail-cards-timeline';
 import './GgsNailCardsSlide.css';
 
-const CARDS = [
+export type DesignCard = { name: string; note: string; photo: string };
+
+const NAIL_CARDS: DesignCard[] = [
   { name: 'French Tip', note: 'Klasik dan rapi untuk setiap hari', photo: frenchPhoto },
   { name: 'Floral Pastel', note: 'Lukisan bunga mungil yang manis', photo: floralPhoto },
   { name: 'Pearl Chrome', note: 'Kilau mutiara yang lembut', photo: chromePhoto },
@@ -19,8 +21,25 @@ const CARDS = [
 ];
 const DECK_CSS = buildNailCardsCss();
 
-/** GGS Feed slide 21 (3:4 video): nail art design cards dealt from a deck, then fanned out. */
-export function GgsNailCardsSlide({ exportRef }: { exportRef?: RefObject<HTMLElement | null> }) {
+type Props = {
+  exportRef?: RefObject<HTMLElement | null>;
+  cards?: DesignCard[];
+  title?: ReactNode;
+  finalNote?: string;
+  label?: string;
+  slideNumber?: number;
+};
+
+/** GGS Feed 3:4 video: design cards glide through a carousel, then fan out. Defaults = slide 21 (nail art). */
+export function GgsNailCardsSlide({
+  exportRef,
+  cards = NAIL_CARDS,
+  title = <>Pilih Nail Art <em>Favoritmu</em></>,
+  finalNote = 'Tinggal pilih, sebut namanya saat booking.',
+  label = 'Pilih nail art favoritmu',
+  slideNumber = 21,
+}: Props) {
+  const CARDS = cards;
   const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
   const [replayKey, setReplayKey] = useState(0);
@@ -35,10 +54,10 @@ export function GgsNailCardsSlide({ exportRef }: { exportRef?: RefObject<HTMLEle
     <div className="w-full max-w-[430px]">
       <style>{DECK_CSS}</style>
       <div className="ggn-controls">
-        <Button size="icon" variant="outline" aria-label={paused ? 'Putar slide 21' : 'Jeda slide 21'} title={paused ? 'Putar' : 'Jeda'} onClick={() => { setReduced(false); setPaused(!paused); }}>
+        <Button size="icon" variant="outline" aria-label={paused ? `Putar slide ${slideNumber}` : `Jeda slide ${slideNumber}`} title={paused ? 'Putar' : 'Jeda'} onClick={() => { setReduced(false); setPaused(!paused); }}>
           {paused ? <Play size={16} /> : <Pause size={16} />}
         </Button>
-        <Button size="icon" variant="outline" aria-label="Ulangi slide 21" title="Ulangi" onClick={() => { setReplayKey((key) => key + 1); setReduced(false); setPaused(false); }}>
+        <Button size="icon" variant="outline" aria-label={`Ulangi slide ${slideNumber}`} title="Ulangi" onClick={() => { setReplayKey((key) => key + 1); setReduced(false); setPaused(false); }}>
           <RotateCcw size={16} />
         </Button>
       </div>
@@ -48,10 +67,10 @@ export function GgsNailCardsSlide({ exportRef }: { exportRef?: RefObject<HTMLEle
         className={`ggn-root${paused ? ' is-paused' : ''}${reduced ? ' is-reduced' : ''}`}
         data-duration={NAIL_CARDS_DURATION}
         role="img"
-        aria-label={`GGS Beauty — Pilih nail art favoritmu: ${CARDS.map((card) => card.name).join(', ')}.`}
+        aria-label={`GGS Beauty — ${label}: ${CARDS.map((card) => card.name).join(', ')}.`}
       >
         <div className="ggn-glow" aria-hidden="true" />
-        <h2 className="ggn-title" aria-hidden="true">Pilih Nail Art <em>Favoritmu</em></h2>
+        <h2 className="ggn-title" aria-hidden="true">{title}</h2>
         <div className="ggn-stage" aria-hidden="true">
           {CARDS.map((card, i) => (
             <figure key={card.name} className="ggn-card" data-i={i}>
@@ -70,7 +89,7 @@ export function GgsNailCardsSlide({ exportRef }: { exportRef?: RefObject<HTMLEle
           {CARDS.map((card, i) => (
             <p key={card.name} className="ggn-note" data-i={i}>{card.note}</p>
           ))}
-          <p className="ggn-note ggn-final">Tinggal pilih, sebut namanya saat booking.</p>
+          <p className="ggn-note ggn-final">{finalNote}</p>
         </div>
         <div className="ggn-dots" aria-hidden="true">
           {CARDS.map((card, i) => <span key={card.name} className="ggn-dot" data-i={i} />)}
