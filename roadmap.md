@@ -11,11 +11,12 @@
 - [x] Remove "Lowongan Kerja" kicker from slide 19
 - [x] Slide 19 background: combine the 3 uploaded staff photos, pink blazers like slide 12
 - [x] Refine slide 19 photo with natural makeup and preserved faces, professional typography, and regenerate its PNG
+- [x] Slide 23 "We are open" 09.00 – 21.00 setiap hari, with its prebuilt PNG download
 
 ## GGS Story
 - [x] Reels-size cover slide (04) in the GGS Story tab using the owner's new story header/footer
 
 ## Kala Muda recruitment
-- [ ] Add NEMPO Feed slide 35 with animated team photo cards.
-- [ ] Add slide 36 with existing Kala Muda requirements, divisions and registration details.
-- [ ] Produce and connect both MP4 downloads; check desktop and phone playback.
+- [x] Add NEMPO Feed slide 35 with animated team photo cards.
+- [x] Add slide 36 with existing Kala Muda requirements, divisions and registration details.
+- [x] Produce and connect both MP4 downloads; check desktop and phone playback.
