@@ -16,7 +16,7 @@ export function GgsOpenHoursSlide({ exportRef }: { exportRef?: RefObject<HTMLEle
         src={salonPhoto}
         alt="Ruangan salon GGS Beauty dengan nuansa pink"
       />
-      <div className="ggh-shade" />
+      <div className="ggh-fade" />
       <section className="ggh-copy">
         <h2 className="ggh-title">We are open</h2>
         <span className="ggh-rule" aria-hidden="true" />
