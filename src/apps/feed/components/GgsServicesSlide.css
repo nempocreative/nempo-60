@@ -30,10 +30,10 @@
 }
 
 /* Headline (right of the logo in the header overlay) */
-.ggsv-head { position: absolute; z-index: 3; left: 24cqw; right: 6cqw; top: 13.5cqw; }
+.ggsv-head { position: absolute; z-index: 3; left: 24cqw; right: 6cqw; top: 16cqw; }
 .ggsv-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700; font-size: 9cqw; line-height: .98;
+  font-weight: 700; font-size: 7cqw; line-height: .98;
   color: var(--ggsv-magenta);
 }
 .ggsv-title em { font-style: italic; font-weight: 500; }
